@@ -1,19 +1,11 @@
-function averagePair(arr, avg) {
-    let q = 1;
-
-    if(arr.length < 2) {
-        return false;
-    }
-
-    for(let p=0; p<arr.length - 1; p++) {
-        const currentAvg = (arr[p] + arr[q]) / 2;
-        console.log(currentAvg)
-        if((Math.round(currentAvg * 10) / 10) === avg) {
-            return true;
-        }
-        q++;
-    }
-
-    return false;
+function averagePair(arr, num) {
+  let start = 0;
+  let end = arr.length - 1;
+  while (start < end) {
+    let avg = (arr[start] + arr[end]) / 2;
+    if (avg === num) return true;
+    else if (avg < num) start++;
+    else end--;
+  }
+  return false;
 }
-console.log(averagePair([], 2.5))
