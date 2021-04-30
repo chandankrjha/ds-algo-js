@@ -1,5 +1,6 @@
 // Special String Again
 // https://www.hackerrank.com/challenges/special-palindrome-again/problem
+// Naive approach
 
 function specialPalindrome(n, s) {
   let count = 0;
